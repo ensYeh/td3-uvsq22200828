@@ -1,7 +1,8 @@
 package fr.uvsq.cprog.collex;
 
-public class NomMachine
-{
+import java.util.Objects;
+
+public class NomMachine{
     private String nom;
     public NomMachine(String nom) {
         this.nom = nom;

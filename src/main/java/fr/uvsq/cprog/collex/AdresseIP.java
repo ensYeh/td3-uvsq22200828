@@ -1,9 +1,7 @@
 package fr.uvsq.cprog.collex;
 
-/**
- * Hello world!
- *
- */
+import java.util.Objects;
+
 public class AdresseIP 
 {
     private String ip;
@@ -16,5 +14,17 @@ public class AdresseIP
     @Override
     public String toString() {
         return ip;
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (!(obj instanceof AdresseIP)) return false;
+        AdresseIP other = (AdresseIP) obj;
+        return Objects.equals(ip, other.ip);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(ip);
     }
 }
